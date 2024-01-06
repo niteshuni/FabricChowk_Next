@@ -34,7 +34,7 @@ const Team = () => {
           <TeamCard
             name="Digant Goel"
             profession="Co-Founder"
-            imageSrc="/assets/team/t27.jpeg"
+            imageSrc="/assets/team/t28.jpeg"
             desc="Passionate about building business. Expert in execution, operations and strategy. 
             Strong network and expertise in trading and finance"
           />
