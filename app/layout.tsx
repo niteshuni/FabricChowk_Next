@@ -6,6 +6,9 @@ import Footer from '@/components/Footer/Footer';
 export const metadata = {
   title: 'Fabric Chowk',
   description: 'B2B Application for Fabrics',
+  icon: {
+    icon: "/favicon.ico"
+  }
 }
 
 export default function RootLayout({
