@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Features from "@/components/shared/Features";
 
 const HowItWorks = () => {
   return (
@@ -45,12 +46,12 @@ const HowItWorks = () => {
               </div>
 
               <div className="w-full lg:pl-24">
-                <Image
+                {/* <Image
                   height={600}
                   width={400}
                   alt="people grow business"
                   src="/assets/howitworks/person.jpg"
-                />
+                /> */}
                 
               </div>
             </div>
@@ -255,6 +256,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
+      <Features />
     </>
   );
 };
