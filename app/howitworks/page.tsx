@@ -45,13 +45,13 @@ const HowItWorks = () => {
                 </div> */}
               </div>
 
-              <div className="w-full lg:pl-24">
-                {/* <Image
+              <div className="w-full lg:pl-4">
+                <Image
                   height={600}
-                  width={400}
+                  width={900}
                   alt="people grow business"
-                  src="/assets/howitworks/person.jpg"
-                /> */}
+                  src="/assets/howitworks/businessgrow.jpg"
+                />
                 
               </div>
             </div>
