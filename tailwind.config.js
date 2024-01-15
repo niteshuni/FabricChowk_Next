@@ -36,7 +36,10 @@ module.exports = {
       'dark-red': 'rgba(44, 9, 11, 0.8)',
       'my-blue': '#0660eb',
       'bgimage':'#e5e6e6',
-      'pink':'rgb(236, 72, 153)'
+      'pink':'rgb(236, 72, 153)',
+      'labelcolor': 'rgb(107, 114, 128)',
+      'gray-50': 'rgb(249 250 251)',
+      'gray-300': 'rgb(209 213 219)',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

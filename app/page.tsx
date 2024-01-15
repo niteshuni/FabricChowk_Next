@@ -5,7 +5,7 @@ import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <main style={{marginTop: '7rem'}}>
+    <main style={{marginTop: '4rem'}}>
       <Banner />
       <Companies />
       <Courses />

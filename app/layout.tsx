@@ -2,9 +2,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import './globals.css';
 import Footer from '@/components/Footer/Footer';
 
-
 export const metadata = {
-  title: 'Fabric Chowk',
+  title: 'FabricChowk',
   description: 'B2B Application for Fabrics',
   icon: {
     icon: "/favicon.ico"

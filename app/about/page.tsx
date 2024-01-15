@@ -9,12 +9,13 @@ const About = () => {
         {/* About Us Section */}
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center -mx-4">
-            <div className="w-full px-4 lg:w-7/12">
+            <div className="w-full px-4 lg:w-6/12">
               <div className="about-content">
-                <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-dark sm:text-[42px] lg:text-[40px] xl:text-5xl">
+                <h1 className="text-4xl font-bold !leading-[1.208] text-dark sm:text-[42px] lg:text-[40px] xl:text-5xl">
                   About Us
                 </h1>
-                <p className="mb-8 text-justify text-darkgray">
+                <span className="text-primary text-lg font-semibold">Unraveling Excellence, One Thread at a Time!</span>
+                <p className="mb-8 mt-5 text-justify text-darkgray">
                   <strong>FabricChowk</strong> is result of collaboration
                   between likeminded professionals who look forward to organize
                   the unorganized sector. The team of accomplished IIT & IIM
@@ -43,10 +44,10 @@ const About = () => {
               </div>
             </div>
             <div className="hidden px-4 lg:block lg:w-1/12"></div>
-            <div className="w-full px-4 lg:w-4/12">
+            <div className="w-full px-1 lg:w-5/12">
               <div className="lg:ml-auto lg:text-right">
-                <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                    <Image src="/assets/about/aboutus.jpg" alt="about" className="max-w-full lg:ml-auto" height={600} width={900}/>
+                <div className="relative inline-block pt-11 lg:pt-0">
+                    <Image src="/assets/about/about.jpg" alt="about" className="max-w-full lg:ml-auto" height={600} width={900}/>
                 </div>
               </div>
             </div>
@@ -63,7 +64,7 @@ const About = () => {
             <h1 className="title-font text-5xl font-bold">
               Our Vision
             </h1>
-            <span className="text-primary mb-5 mt-1">Transforming Fabric Commerce & Tradition</span>
+            <span className="text-primary text-lg font-semibold mb-5 mt-1">Transforming Fabric Commerce & Tradition</span>
             <p className="mb-8 text-darkgray leading-relaxed">
             Empowering India&apos;s fabric B2B Future: Revolutionizing Commerce, PioneeringInnovation, and Elevating Tradition, 
             Redefining the Way We Trade Fabrics for a Better Tomorrow.
@@ -78,7 +79,7 @@ const About = () => {
             <h1 className="title-font text-5xl font-bold">
               Our Mission
             </h1>
-            <span className="text-primary mb-5 mt-1">Unifying Fabric Traders, Amplifying Reach</span>
+            <span className="text-primary text-lg font-semibold mb-5 mt-1">Unifying Fabric Traders, Amplifying Reach</span>
             <p className="mb-8 text-darkgray leading-relaxed">
             Our mission is to organize the unorganized fabric trading sector between wholesalers and retailers, empowering them with enhanced convenience 
             and substantial cost savings. With our cutting-edge platform, retailers can gain direct access to an extensive network of trusted and reputable wholesalers. 

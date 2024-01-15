@@ -16,7 +16,7 @@ const Signin = () => {
 
     return (
         <>
-            <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0">
+            <div className="inline-flex items-center sm:static sm:inset-auto sm:pr-0">
                 <div className='hidden lg:block'>
                     <button type="button" className='text-lg text-kellygreen font-medium' onClick={openModal}>
                         Log In

@@ -177,3 +177,9 @@ hr {
 .rct-node-icon {
     display: none;
 }
+
+:where(.menu li:not(.menu-title):not(.disabled) > *:not(ul):not(details):not(.menu-title)):not(.\!active):hover, :where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)):not(.\!active):hover {
+    background-color: #43C639 !important;
+    color: white;
+    opacity: 1;
+}

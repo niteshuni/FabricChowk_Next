@@ -16,10 +16,10 @@ const Register = () => {
 
     return (
         <>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
+            <div className="flex ml-auto items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                 <div className='hidden lg:block'>
-                    <button className="text-kellygreen text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-full bg-semikellygreen hover:text-white hover:bg-kellygreen" onClick={openModal}>
-                        Sign up
+                    <button className="text-kellygreen text-lg font-medium py-5 px-12 transition duration-150 ease-in-out rounded-full bg-semikellygreen hover:text-white hover:bg-kellygreen" onClick={openModal}>
+                        Sign In
                     </button>
                 </div>
             </div>

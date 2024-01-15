@@ -61,9 +61,10 @@ const footer = () => {
 
                 <div className='sm:col-span-6 lg:col-span-5'>
                     <div className="flex flex-shrink-0 items-center border-right">
-                        <Image src="/assets/logo/logo.svg" alt="logo" width={214} height={66} />
+                        <Image src="/assets/logo/logo_final.png" alt="logo" width={250} height={66} />
                     </div>
-                    <h3 className='text-xs font-medium text-gunmetalgray lh-160 mt-5 mb-4 lg:mb-16'> Open an account in minutes, get full financial <br /> control for much longer.</h3>
+                    <h3 className='text-xs font-medium text-gunmetalgray lh-160 mt-5 mb-4 lg:mb-16'> Transforming Textiles, Empowering Trade. 
+                    <br />Join Us in Crafting the Future of Fabrics!</h3>
                     <div className='flex gap-4'>
 
                         {socialLinks.map((items, i) => (
