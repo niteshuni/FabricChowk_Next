@@ -10,7 +10,7 @@ const Service = () => {
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+            <div className="mx-auto mb-12 max-w-[650px] text-center lg:mb-20">
               <h2 className="mb-3 shrink-0 text-4xl font-bold text-black sm:text-6xl lg:text-7xl leading-[1.2] text-dark">
                 What Sets us Apart!
               </h2>

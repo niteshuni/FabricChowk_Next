@@ -256,7 +256,6 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
-      <Features />
     </>
   );
 };
