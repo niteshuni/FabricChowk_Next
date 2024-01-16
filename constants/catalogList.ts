@@ -13,7 +13,7 @@ const productList: Product[] = [
     company: Partners.navdurgaFabrics,
     discount: 10,
     trending: false,
-    imgSrc: "/assets/product/southSaree.png"
+    imgSrc: "/assets/product/southsaree.png"
   },
   {
     name: "Designer Shawl",
