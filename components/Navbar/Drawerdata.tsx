@@ -251,7 +251,7 @@ const Data = () => {
                             <a href="/retailers">Retailers</a>
                           </li>
                           <li>
-                            <a href="/howitworks">How&nbsp;FabricChowk&nbsp;Works</a>
+                            <a href="/howitworks">How FabricChowk Works</a>
                           </li>
                           <li>
                             <a href="/faq">FAQ</a>

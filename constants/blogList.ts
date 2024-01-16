@@ -10,7 +10,8 @@ const blogList: BlogCardType[] = [
         userImgSrc: "/assets/team/t2round.jpeg",
         dateString: "December 10, 2023",
         views: 50,
-        comment: 3,
+        comment: 2,
+        href: "/blogs/blog1",
     },
     {
         readTime: "4 min read",
@@ -21,7 +22,8 @@ const blogList: BlogCardType[] = [
         userImgSrc: "/assets/team/t2round.jpeg",
         dateString: "December 17, 2023",
         views: 38,
-        comment: 2,
+        comment: 1,
+        href: "/blogs/blog2"
     },
     {
         readTime: "8 min read",
@@ -32,7 +34,8 @@ const blogList: BlogCardType[] = [
         userImgSrc: "/assets/team/t2round.jpeg",
         dateString: "December 20, 2023",
         views: 30,
-        comment: 2,
+        comment: 1,
+        href: "/blogs/blog3"
     },
     {
         readTime: "5 min read",
@@ -43,7 +46,8 @@ const blogList: BlogCardType[] = [
         userImgSrc: "/assets/team/t2round.jpeg",
         dateString: "December 28, 2023",
         views: 22,
-        comment: 1,
+        comment: 0,
+        href: "/blogs/blog4"
     },
     {
         readTime: "4 min read",
@@ -55,6 +59,7 @@ const blogList: BlogCardType[] = [
         dateString: "January 5, 2023",
         views: 10,
         comment: 0,
+        href: "/blogs/blog5"
     },
 ]; 
 

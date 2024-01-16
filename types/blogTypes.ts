@@ -8,4 +8,5 @@ export type BlogCardType = {
     dateString: string;
     views: number;
     comment: number;
+    href: string;
 };

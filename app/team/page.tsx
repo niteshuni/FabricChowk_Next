@@ -41,7 +41,7 @@ const Team = () => {
             profession="CTO"
             imageSrc="/assets/team/tf3.jpeg"
             desc="Innovator who is seasoned in product strategy, Product Market Fitment and Solution Architecture .
-            Talks about products, features and user experiance"
+            Talks about products, features and user experience"
           />
 
           {/* <div className="p-4 lg:w-1/4 md:w-1/2">

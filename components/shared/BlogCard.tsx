@@ -17,7 +17,7 @@ const BlogCard = (props: BlogCardType) => {
               {props.para}
             </p>
             <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-              <a className="text-primary inline-flex items-center">
+              <a href={props.href} className="text-primary inline-flex items-center">
                 Learn More
                 <svg
                   className="w-4 h-4 ml-2"
