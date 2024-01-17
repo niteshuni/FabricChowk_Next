@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
+interface LinkDetails {
+    name: string;
+    href: string;
+}
 interface ProductType {
     id: number;
     section: string;
-    link: string[];
+    link: LinkDetails[];
 }
 
 interface socialLinks {
@@ -36,18 +40,12 @@ const products: ProductType[] = [
     {
         id: 1,
         section: "Company",
-        link: ['About', 'Careers', 'Mobile', 'Blog', 'How we work?'],
+        link: [{name: 'About', href:"/about"}, {name: 'Blog', href:"/blogs"}, {name: 'How we work?', href:"/"}],
     },
     {
         id: 2,
-        section: "Contact",
-        link: ['Help/FAQ', 'Press', 'Affiliates', 'Hotel owners', 'Partners']
-    }
-    ,
-    {
-        id: 3,
         section: "More",
-        link: ['Airline fees', 'Airlines', 'Low fare tips', 'Badges &', 'Certificates']
+        link: [{name: 'Contact', href:"/contact"}, {name: 'FAQ', href:"/faq"}, {name: 'Partners', href:"#home-section"}, {name: 'Categories', href:"#courses"}]
     }
 ]
 
@@ -85,9 +83,9 @@ const footer = () => {
                     <div key={product.id} className="sm:col-span-2">
                         <p className="text-black text-lg font-medium mb-9">{product.section}</p>
                         <ul>
-                            {product.link.map((link: string, index: number) => (
+                            {product.link.map((link: LinkDetails, index: number) => (
                                 <li key={index} className='mb-5'>
-                                    <Link href="/" className="text-darkgray text-base font-normal mb-6 space-links">{link}</Link>
+                                    <Link href={link.href} className="text-darkgray text-base font-normal mb-6 space-links">{link.name}</Link>
                                 </li>
                             ))}
                         </ul>
