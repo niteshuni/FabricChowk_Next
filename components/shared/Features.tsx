@@ -6,7 +6,7 @@ import ValueSVG from "../svg/ValueSVG";
 
 const Service = () => {
   return (
-    <section className="pt-15 dark:bg-dark lg:pt-[90px]">
+    <section className="pt-15 lg:pt-[90px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
