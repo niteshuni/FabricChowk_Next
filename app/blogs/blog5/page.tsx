@@ -179,7 +179,7 @@ const Blog5 = () => {
           <section className="not-format">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg lg:text-2xl font-bold text-gray-900">
-                Discussion (20)
+                Discussion
               </h2>
             </div>
             <form className="mb-6">

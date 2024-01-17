@@ -153,7 +153,7 @@ const Blog1 = () => {
                   <p className="inline-flex items-center mr-3 font-semibold text-sm text-gray-900">
                     <Image
                       alt="Akshay Kumar"
-                      src="/assets/team/t2round.jpeg"
+                      src="/assets/team/t3round.jpeg"
                       height={20}
                       width={20}
                       className="w-10 h-10 mask mask-circle rounded-full flex-shrink-0 object-cover object-center"
@@ -316,7 +316,7 @@ const Blog1 = () => {
                   <p className="inline-flex items-center mr-3 font-semibold text-sm text-gray-900">
                     <Image
                       alt="Amit Shukla"
-                      src="/assets/team/t2round.jpeg"
+                      src="/assets/team/t1round.jpeg"
                       height={20}
                       width={20}
                       className="w-10 h-10 mask mask-circle rounded-full flex-shrink-0 object-cover object-center"
