@@ -1,21 +1,63 @@
 import { Product } from "@/types/catalogTypes";
-import React from "react";
+import React, { useRef, useState } from "react";
+import MessageTextarea from "../shared/MessageTextArea";
+import PartnerCombobox from "../shared/PartnerCombobox";
+import OrderPlacedModal from "../OrderModals/OrderPlacedModal";
+import { PartnerWholesaler } from "@/types/PartnersType";
+import { OrderEntity } from "@/types/orderTypes";
+import { wholesalerList } from "@/constants/partnerList";
 
 interface InfoProps {
   data: Product;
 }
 
 const ProductInfo: React.FC<InfoProps> = ({ data }) => {
+
+  const [orderPlaced, setOrderPlaced] = useState(false);
+  const quantityRef = useRef<HTMLInputElement>(null);
+  const [itemText, setItemText] = useState("");
+  const [wholesaler, setWholesaler] = useState<PartnerWholesaler>(wholesalerList[0]);
+
+  const onClickBuyHandler = () => {
+    const orderObject: OrderEntity = {
+      id: "459832",
+      courierPartner: "",
+      date: "",
+      delivered: false,
+      itemComment: itemText,
+      paymentFlag: false,
+      productId: "1213",
+      quantity: +(quantityRef.current?.value ?? 0),
+      retailer: "Rushil Bansal, RR Enterprises",
+      status: 1,
+      tLink: undefined,
+      tNumber: undefined,
+      transactionId: undefined,
+      wholesaler: wholesaler.businessName,
+    };
+    localStorage.clear();
+    localStorage.setItem('myOrder', JSON.stringify(orderObject));    
+    setOrderPlaced(true);
+  }
+
+  const selectedWholesaler = (person: PartnerWholesaler) => {
+    setWholesaler(person);
+  }
+
+  const commentEntered = (text: string) => {
+    setItemText(text);
+  }
+
   return (
     <div>
+      {orderPlaced && <OrderPlacedModal orderId="123"/>}
       <h1 className="text-3xl bordered font-bold text-gray-900">{data.name}</h1>
       <div className="mt-3 items-end justify-between">
-        <p className="text-2xl text-gray-900">{data.company}</p>
+        {/* <p className="text-2xl text-gray-900">{data.company}</p> */}
       </div>
       <hr className="my-4" />
       <div className="flex flex-col gap-y-2">
         <div className="flex items-center">
-          {/* <h3 className="font-semibold text-black">Size:</h3> */}
           <div>{data.details}</div>
         </div>
         <div className="flex items-center gap-x-2">
@@ -48,9 +90,39 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
           Trending
         </span>
       </div>
+
       <div className="mt-8 flex items-center gap-x-8">
-        <button className="btn btn-primary text-white flex items-center gap-x-3">
-          Add To Cart
+      <label className="form-control w-full">
+          <div className="label">
+            <span className="label-text text-lg font-bold">Wholesaler</span>
+          </div>
+          <PartnerCombobox selectedValue={selectedWholesaler}/>
+        </label>
+      
+      </div>
+      <div className="mt-3 flex items-center gap-x-8">
+        <label className="form-control w-full">
+          <div className="label">
+            <span className="label-text text-lg font-bold">Quantity</span>
+          </div>
+          <input
+            type="number"
+            placeholder="9999"
+            className="input input-bordered w-24"
+            ref={quantityRef}
+          />
+        </label>
+      </div>
+
+      <div className="mt-3 flex items-center gap-x-8">
+      <MessageTextarea setItemText={commentEntered}/>
+      </div>
+
+      
+
+      <div className="mt-3 flex items-center gap-x-8">
+        <button disabled={orderPlaced} onClick={onClickBuyHandler} className="btn btn-primary text-white flex items-center gap-x-3">
+          Buy Now
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

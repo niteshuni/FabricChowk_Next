@@ -17,7 +17,7 @@ export default function Home() {
       {/* <Newsletter /> */}
       <Features />
       <Stats />
-      <FabricBot />
+      {/* <FabricBot /> */}
     </main>
   )
 }

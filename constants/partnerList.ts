@@ -2,6 +2,7 @@ import { PartnerWholesaler } from "@/types/PartnersType";
 
 export const wholesalerList: PartnerWholesaler[] = [
   {
+    id: "w1",
     businessName: "Bajrang Lal Manoj Kumar",
     city: "Patna",
     zone: "North",
@@ -13,6 +14,7 @@ export const wholesalerList: PartnerWholesaler[] = [
       "2nd Floor, Vision Rupak Commercial Complex, Rupak Cinema Campus, Bakarhanj, 800004",
   },
   {
+    id: "w2",
     businessName: "Mungipa Texttile",
     city: "Patna",
     zone: "North",
@@ -24,8 +26,8 @@ export const wholesalerList: PartnerWholesaler[] = [
       "Shop No-104-109, 6th floor, Khetan Super Market, Birla Mandir Road, 800004",
   },
   {
+    id: "w3",
     businessName: "Gaurav Synthetics",
-
     city: "Patna",
     zone: "North",
     phone: "9431017037",

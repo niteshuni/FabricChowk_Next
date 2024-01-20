@@ -1,4 +1,5 @@
 export type PartnerWholesaler = {
+    id: string;
     businessName: string;
     address: string;
     city: string;

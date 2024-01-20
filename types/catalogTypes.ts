@@ -8,11 +8,13 @@ export type Product = {
   nestedCategory: string;
   type: string;
   price: string;
+  hPrice: string;
   company: string;
   discount: number;
   trending: boolean;
   imgSrc: string;
   paymentBuffer?: string;
+  id: string;
 };
 
 export const Category = {

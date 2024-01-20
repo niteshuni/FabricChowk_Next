@@ -48,7 +48,13 @@ export const ProductCard = ({ productList }: { productList: Product[] }) => {
             </svg>
           </label>
           <figure className="bg-bgimage overflow-hidden rounded-tl-xl rounded-tr-xl lg:rounded-bl-xl lg:rounded-tr-none">
-            <Image style={{objectFit:'contain'}} height={500} width={300} alt={item.name} src={item.imgSrc} />
+            <Image
+              style={{ objectFit: "contain" }}
+              height={500}
+              width={300}
+              alt={item.name}
+              src={item.imgSrc}
+            />
           </figure>
           <div className="card-body py-4">
             <h2 className="card-title text-kellygreen">{item.name}</h2>
@@ -67,10 +73,18 @@ export const ProductCard = ({ productList }: { productList: Product[] }) => {
               <strong>Price:</strong> ₹{item.price}
             </span>
             <span>
-              <strong>Discount:</strong> <span className="badge text-kellygreen bg-semikellygreen font-bold">{item.discount}%</span>
+              <strong>Discount:</strong>{" "}
+              <span className="badge text-kellygreen bg-semikellygreen font-bold">
+                {item.discount}%
+              </span>
             </span>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Details</button>
+              <a
+                href={`/product/${item.id}`}
+                className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+              >
+                Details
+              </a>
             </div>
           </div>
         </div>

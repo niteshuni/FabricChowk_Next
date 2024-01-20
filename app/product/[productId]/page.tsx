@@ -1,3 +1,5 @@
+"use client";
+
 import ProductInfo from "@/components/Product/ProductInfo";
 import productList from "@/constants/catalogList";
 import React from "react";
@@ -10,13 +12,14 @@ interface ProductDetailPage {
 }
 
 const ProductDetailPage: React.FC<ProductDetailPage> = ({ params }) => {
-  const product = productList[0];
+  const product = productList.find((item) => item.id === params.productId) ?? productList[0];
   return (
     <div className="mx-auto max-w-7xl mt-40">
       <div className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <div className="bg-bgimage rounded-xl">
           <Image
+          className="mx-auto"
             style={{ objectFit: "contain" }}
             height={500}
             width={400}
@@ -40,8 +43,12 @@ const ProductDetailPage: React.FC<ProductDetailPage> = ({ params }) => {
                 <h2 className="card-title">{item.name}</h2>
                 <p>{item.details}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary text-white">Details</button>
-                </div>
+                <a
+                href={`/product/${item.id}`}
+                className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+              >
+                Details
+              </a>                </div>
               </div>
             </div>
             ))}

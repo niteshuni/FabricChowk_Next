@@ -230,3 +230,7 @@ hr {
     top: 15px;
     z-index: 10000;
 }
+
+.step-primary:before {
+    background-color: #6d4bff	 !important;
+}
