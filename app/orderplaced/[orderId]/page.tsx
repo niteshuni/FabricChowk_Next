@@ -16,7 +16,7 @@ const OrderDetails: React.FC<OrderDetailsParam> = ({params}) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isTransaction, setIsTransaction] =  useState(false);
   const transactionRef = useRef<HTMLInputElement>(null);
-  const [currentOrderDetails, setCurrentOrderDetails] = useState<OrderEntity>(JSON.parse(localStorage.getItem("myOrder") ?? ""));
+  const [currentOrderDetails, setCurrentOrderDetails] = useState<OrderEntity>(JSON.parse(localStorage.getItem("myOrder") ?? JSON.stringify(orderObject)));
 
   useEffect(() => {
     const handleStorageChange = () => {

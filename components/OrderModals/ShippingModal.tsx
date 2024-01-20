@@ -41,7 +41,6 @@ export default function ShippingModal() {
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
-                    as="h"
                     className="text-xl font-bold"
                   >
                     <svg className="w-6 h-6 text-gray-800 inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">

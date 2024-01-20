@@ -25,7 +25,7 @@ const orderObject: OrderEntity = {
 
 const OrderReceivedDetails: React.FC = () => {
 
-    const [currentOrderDetails, setCurrentOrderDetails] = useState<OrderEntity>(JSON.parse(localStorage.getItem("myOrder") ?? ""));
+    const [currentOrderDetails, setCurrentOrderDetails] = useState<OrderEntity>(JSON.parse(localStorage.getItem("myOrder") ?? JSON.stringify(orderObject)));
     const [isApproved, setIsApproved] = useState(false);
     const [transactionFlag, setTransactionFlag] = useState(0);
     const [trackingError, setTrackingError] = useState(false);
