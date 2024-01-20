@@ -66,11 +66,11 @@ export const ProductCard = ({ productList }: { productList: Product[] }) => {
             <span>
               <strong>Type:</strong> {item.type}
             </span>
-            <span>
+            {/* <span>
               <strong>Company:</strong> {item.company}
-            </span>
+            </span> */}
             <span>
-              <strong>Price:</strong> ₹{item.price}
+              <strong>Price:</strong> {`₹${item.price} - ₹${item.hPrice}`}
             </span>
             <span>
               <strong>Discount:</strong>{" "}
