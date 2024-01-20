@@ -32,6 +32,7 @@ const OrderReceivedDetails: React.FC = () => {
     const partnerRef = useRef<HTMLInputElement>(null);
     const awbRef = useRef<HTMLInputElement>(null);
     const trackingLinkRef = useRef<HTMLInputElement>(null);
+    const [trackingDone, setTrackingDone] = useState(false);
 
     useEffect(() => {
       const handleStorageChange = () => {
@@ -52,6 +53,7 @@ const OrderReceivedDetails: React.FC = () => {
       if ((partnerName.length> 0 && trackingNumber.length > 0) || trackingLink.length > 0) {
         setTrackingError(false);
         changePostTrackingDetails(trackingNumber, partnerName, trackingLink);
+        setTrackingDone(true);
       } else {
         setTrackingError(true);
       }
@@ -213,7 +215,9 @@ const OrderReceivedDetails: React.FC = () => {
                   <input
                     type="checkbox"
                     className="toggle toggle-primary"
-                    checked={currentOrderDetails.status >=2 ? true: isApproved}
+                    checked={
+                      currentOrderDetails.status >= 2 ? true : isApproved
+                    }
                     onChange={handleCheckboxChange}
                   />
                 </div>
@@ -273,15 +277,15 @@ const OrderReceivedDetails: React.FC = () => {
                 <div className="border-t border-gray-200 mt-2 p-2">
                   <h1 className="font-bold text-kellygreen">Shipping Method</h1>
                   {trackingError && (
-                     <span className="text-red font-bold">
-                     Error!! Please enter Courier Partner & AWB number or
-                        Tracking Link.
-                   </span>
+                    <span className="text-red font-bold">
+                      Error!! Please enter Courier Partner & AWB number or
+                      Tracking Link.
+                    </span>
                   )}
                   <dl className="py-2 text-sm">
                     <div>
                       <dt className="font-bold">
-                        {currentOrderDetails.status === 4 ? (
+                        {currentOrderDetails.status === 4 && !trackingDone ? (
                           <div className="relative">
                             <input
                               type="text"
@@ -309,7 +313,7 @@ const OrderReceivedDetails: React.FC = () => {
                         )}
                       </dt>
                       <dd className="text-darkgray">
-                        {currentOrderDetails.status === 4 ? (
+                        {currentOrderDetails.status === 4 && !trackingDone ? (
                           <div className="relative mt-2">
                             <input
                               type="text"
@@ -334,7 +338,7 @@ const OrderReceivedDetails: React.FC = () => {
                           </div>
                         )}
 
-                        {currentOrderDetails.status === 4 ? (
+                        {currentOrderDetails.status === 4 && !trackingDone ? (
                           <div className="relative mt-2">
                             <input
                               type="url"
@@ -359,7 +363,7 @@ const OrderReceivedDetails: React.FC = () => {
                           </a>
                         )}
 
-                        {currentOrderDetails.status === 4 ? (
+                        {currentOrderDetails.status === 4 && !trackingDone? (
                           <button
                             onClick={handleTackingDetailHandler}
                             className="btn btn-primary mt-2"
@@ -390,6 +394,31 @@ const OrderReceivedDetails: React.FC = () => {
             </div>
           </section>
         </div>
+
+        <p className="text-gray-500 mt-3 ml-5 dark:text-gray-400">
+          Facing issues for the Order? please
+          <a
+            href="/contact"
+            className="inline-flex ml-2 items-center font-medium text-primary hover:underline"
+          >
+           Contact Us
+            <svg
+              className="w-4 h-4 ms-2 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+          </a>
+        </p>
       </main>
     </>
   );
