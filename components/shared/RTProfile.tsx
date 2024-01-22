@@ -32,7 +32,7 @@ const RTProfile = () => {
           tabIndex={0}
           className="dropdown-content z-[1] card card-compact w-56 shadow bg-white text-primary-content"
         >
-          <div className="px-4 py-3">
+          <div className="px-4 py-3 border-b border-gray-300">
             <span className="block text-sm text-black">
               Rushil Bansal
             </span>

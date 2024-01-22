@@ -11,28 +11,28 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "/assets/carousel/ws1.svg"
+        imgSrc: "/assets/carousel/ws11.svg"
     },
     {
-        imgSrc: "/assets/carousel/fedex.svg"
+        imgSrc: "/assets/carousel/ws22.svg"
     },
     {
-        imgSrc: "/assets/carousel/google.svg"
+        imgSrc: "/assets/carousel/ws4.svg"
     },
     {
-        imgSrc: "/assets/carousel/hubspot.svg"
+        imgSrc: "/assets/carousel/ws55.svg"
     },
     {
-        imgSrc: "/assets/carousel/microsoft.svg"
+        imgSrc: "/assets/carousel/ws6.svg"
     },
     {
-        imgSrc: "/assets/carousel/walmart.svg"
+        imgSrc: "/assets/carousel/ws33.svg"
     },
     {
-        imgSrc: "/assets/carousel/airbnb.svg"
+        imgSrc: "/assets/carousel/ws7.svg"
     },
     {
-        imgSrc: "/assets/carousel/fedex.svg"
+        imgSrc: "/assets/carousel/ws8.svg"
     }
 ]
 
@@ -85,12 +85,12 @@ export default class MultipleItems extends Component {
 
             <div id="partnersLogo" className='text-center my-20'>
                 <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="text-midnightblue text-2xl font-semibold">Trusted Partners</h2>
+                    <h2 className="text-midnightblue mb-10 text-2xl font-semibold">Trusted Partners</h2>
                     <div className="py-5">
                         <Slider {...settings}>
                             {data.map((item, i) =>
                                 <div key={i}>
-                                    <Image src={item.imgSrc} alt={item.imgSrc} width={250} height={250} />
+                                    <Image src={item.imgSrc} alt={item.imgSrc} width={200} height={200} />
                                 </div>
                             )}
                         </Slider>
