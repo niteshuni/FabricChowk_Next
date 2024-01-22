@@ -53,16 +53,33 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     const [currentLink, setCurrentLink] = useState('/');
+    const [isWSlogged, setIsWSlogged] = useState<string|null>(null);
+    const [isRTlogged, setIsRTlogged] = useState<string|null>(null);
+
 
     const pathname = usePathname();
     const pathArray = pathname.split('/');
     const checkWSPath = pathArray.find((path) => path === "ws");
-    let isWSlogged: string | null = null;
-    let isRTlogged: string | null = null;
+    //let isWSlogged: string | null = null;
+    //let isRTlogged: string | null = null;
+
+    
+    // useEffect(() => {
+    //   const handleStorageChange = () => {
+    //     setIsWSlogged(localStorage.getItem("signedws"));
+    //     setIsRTlogged(localStorage.getItem("signedrt"));
+    //   };
+  
+    //   window.addEventListener('storage', handleStorageChange);
+  
+    //   return () => {
+    //     window.removeEventListener('storage', handleStorageChange);
+    //   };
+    // }, []); 
 
     if(typeof window != null) {
-      isWSlogged = localStorage.getItem("signedws");
-      isRTlogged = localStorage.getItem("signedrt");
+      //isWSlogged = localStorage.getItem("signedws");
+      //isRTlogged = localStorage.getItem("signedrt");
 
     }
 
