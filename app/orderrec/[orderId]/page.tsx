@@ -21,6 +21,7 @@ const orderObject: OrderEntity = {
     tNumber: undefined,
     courierPartner: "",
     paymentFlag: false,
+    agreedPrice: "900",
 };
 
 const OrderReceivedDetails: React.FC = () => {

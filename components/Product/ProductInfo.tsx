@@ -15,6 +15,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
 
   const [orderPlaced, setOrderPlaced] = useState(false);
   const quantityRef = useRef<HTMLInputElement>(null);
+  const agreedPriceRef = useRef<HTMLInputElement>(null);
   const [itemText, setItemText] = useState("");
   const [wholesaler, setWholesaler] = useState<PartnerWholesaler>(wholesalerList[8]);
 
@@ -34,6 +35,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
       tNumber: undefined,
       transactionId: undefined,
       wholesaler: wholesaler.businessName,
+      agreedPrice: agreedPriceRef.current?.value ?? "0",
     };
     localStorage.removeItem('myOrder');
     localStorage.setItem('myOrder', JSON.stringify(orderObject));    
@@ -78,7 +80,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
         </div>
         <div className="flex items-center gap-x-2">
           <h3 className="font-semibold text-black">Price:</h3>
-          <div>{`₹${data.price} - ₹${+data.price + 200}`}</div>
+          <div>{`₹${data.price} - ₹${data.hPrice}`}</div>
         </div>
         <div className="flex items-center gap-x-2">
           <h3 className="font-semibold text-black">Discount:</h3>
@@ -100,6 +102,24 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
         </label>
       
       </div>
+
+      <div className="mt-3 flex items-center gap-x-8">
+        <label className="form-control w-full">
+          <div className="label">
+            <span className="label-text text-lg font-bold">Agreed Price(₹)</span>
+          </div>
+          <input
+            type="number"
+            placeholder="Price"
+            className="input input-bordered w-32"
+            ref={agreedPriceRef}
+            min={data.price}
+            max={data.hPrice}
+          />
+        </label>
+      </div>
+
+
       <div className="mt-3 flex items-center gap-x-8">
         <label className="form-control w-full">
           <div className="label">

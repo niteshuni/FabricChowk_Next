@@ -40,7 +40,7 @@ const FabricBot = () => {
             {
               id: "1",
               message:
-                "Hello!!, 🚧 Our AI Fabric Guru - 'FabricMate' is getting a makeover to elevate your experience! Stay tuned for the upgraded brilliance. In the meantime, we appreciate your patience and look forward to weaving magic together soon! ✨",
+                "Hello!!, 🚧 Our AI - 'FabricMate' is getting a makeover to elevate your experience! Stay tuned for the upgraded brilliance. In the meantime, we appreciate your patience and look forward to weaving magic together soon! ✨",
               end: true,
             },
           ]}

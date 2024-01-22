@@ -15,4 +15,5 @@ export type OrderEntity = {
     courierPartner: string;
     paymentFlag: boolean;
     retailer: string;
+    agreedPrice: string;
 };

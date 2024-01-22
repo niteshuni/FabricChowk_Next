@@ -21,6 +21,7 @@ const orderObject: OrderEntity = {
     tNumber: undefined,
     courierPartner: "",
     paymentFlag: false,
+    agreedPrice: "900",
 };
 
 const OrderWS: React.FC = () => {
@@ -184,6 +185,10 @@ const OrderWS: React.FC = () => {
                     <div className="flex pl-4 sm:pl-6">
                       <dt className="font-medium text-darkgray">Price</dt>
                       <dd className="ml-2 text-gray-700">{`₹${product.price}-₹${product.hPrice}`}</dd>
+                    </div>
+                    <div className="flex pl-4 sm:pl-6">
+                      <dt className="font-medium text-darkgray">Agreed Price</dt>
+                      <dd className="ml-2 text-gray-700">{`₹${currentOrderDetails.agreedPrice}`}</dd>
                     </div>
                   </dl>
                 </div>
