@@ -106,48 +106,56 @@ const Notification: React.FC = () => {
               <div className="w-full ps-3">
                 <div className="text-black text-sm">
                   Order ID:
-                  <span className="font-semibold ml-2">#578903378</span>
+                  <span className="font-semibold ml-2">#459867</span>
                 </div>
                 <span className="text-right text-black text-sm">
-                  Price: <strong>₹780 - ₹890</strong>
+                {checkWSPath
+                        ? `Retailer: Anil Mahajan`
+                        : `Wholesaler: Gaurav Creation`}
                 </span>
-                <div className="text-xs text-primary">Awaiting Approval</div>
+                <div className="text-xs text-primary">Delivered</div>
               </div>
             </a>
             <a href="#" className="flex px-4 py-3 hover:bg-grey500">
               <div className="w-full ps-3">
                 <div className="text-black text-sm">
                   Order ID:
-                  <span className="font-semibold ml-2">#578903378</span>
+                  <span className="font-semibold ml-2">#459231</span>
                 </div>
                 <span className="text-right text-black text-sm">
-                  Price: <strong>₹780 - ₹890</strong>
+                {checkWSPath
+                        ? `Retailer: Mrityunjay Saha`
+                        : `Wholesaler: Vineet Fashions`}
                 </span>
-                <div className="text-xs text-primary">Awaiting Approval</div>
+                <div className="text-xs text-primary">Delivered</div>
               </div>
             </a>
             <a href="#" className="flex px-4 py-3 hover:hover:bg-grey500">
               <div className="w-full ps-3">
                 <div className="text-black text-sm">
                   Order ID:
-                  <span className="font-semibold ml-2">#578903378</span>
+                  <span className="font-semibold ml-2">#425643</span>
                 </div>
                 <span className="text-right text-black text-sm">
-                  Price: <strong>₹780 - ₹890</strong>
+                {checkWSPath
+                        ? `Retailer: Gaurav Agarwal`
+                        : `Wholesaler: Rampuria Vanijya`}
                 </span>
-                <div className="text-xs text-primary">Awaiting Approval</div>
+                <div className="text-xs text-primary">Delivered</div>
               </div>
             </a>
             <a href="#" className="flex px-4 py-3 hover:hover:bg-grey500">
               <div className="w-full ps-3">
                 <div className="text-black text-sm">
                   Order ID:
-                  <span className="font-semibold ml-2">#578903378</span>
+                  <span className="font-semibold ml-2">#400243</span>
                 </div>
                 <span className="text-right text-black text-sm">
-                  Price: <strong>₹780 - ₹890</strong>
+                {checkWSPath
+                        ? `Retailer: Anil Dinesh Rajgarhia`
+                        : `Wholesaler: Gaurav Synthetics`}
                 </span>
-                <div className="text-xs text-primary">Awaiting Approval</div>
+                <div className="text-xs text-primary">Delivered</div>
               </div>
             </a>
           </div>
