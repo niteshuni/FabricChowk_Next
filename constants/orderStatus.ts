@@ -26,4 +26,5 @@ export const orderObject: OrderEntity = {
     tNumber: undefined,
     courierPartner: "",
     paymentFlag: true,
+    agreedPrice: "900",
 };
