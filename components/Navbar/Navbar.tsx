@@ -11,6 +11,7 @@ import Image from 'next/image';
 import WSProfile from '../shared/WSProfile';
 import { usePathname } from 'next/navigation'
 import RTProfile from '../shared/RTProfile';
+import LanguageToggle from '../shared/LanguageToggle';
 
 interface NavigationItem {
     name: string;
@@ -348,6 +349,8 @@ const Navbar = () => {
                   </ul>
                 </div>
               </div>
+
+              <LanguageToggle />
 
               <Notification />
 
