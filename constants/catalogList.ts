@@ -4,7 +4,7 @@ import { Category, Product, sareeCottonSubCategory, sareeSubCategory } from "../
 const productList: Product[] = [
   {
     id: "1211",
-    name: "Sounth Indian Cotton Saree",
+    name: "South Indian Cotton Saree",
     details: "Authentic South Indian Cotton Saree, Embracing Timeless Tradition and Graceful Comfort",
     category: Category.saree,
     subCategory: sareeSubCategory.cotton,
@@ -35,7 +35,7 @@ const productList: Product[] = [
   },
   {
     id: "1213",
-    name: "Designer Curtains",
+    name: "Terrycotton Shirt",
     details: "Wonderful blended terrycotton shirt with accentric colors",
     category: Category.suiting,
     subCategory: "Blended Terrycotton",
@@ -63,8 +63,24 @@ const productList: Product[] = [
     discount: 20,
     trending: false,
     imgSrc: "/assets/product/osuit.png"
-
   },
+  // {
+  //   id: "1215",
+  //   name: "Gorgeous Purple Organza Suit",
+  //   details: "Wine Floral Organza Anarkali Suit ",
+  //   category: Category.salwarSuit,
+  //   subCategory: "Organza Suit",
+  //   nestedCategory: "",
+  //   type: "Type 5",
+  //   price: "200",
+  //   hPrice: "500",
+  //   company: Partners.MPFab,
+  //   discount: 20,
+  //   trending: false,
+  //   imgSrc: "/assets/product/osuit.png"
+
+  // },
+  
 ];
 
 export default productList;
