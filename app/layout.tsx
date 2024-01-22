@@ -1,6 +1,12 @@
 import Navbar from '@/components/Navbar/Navbar';
 import './globals.css';
 import Footer from '@/components/Footer/Footer';
+import dynamic from 'next/dynamic';
+
+const NavbarNoSSR = dynamic(
+  () => import('../components/Navbar/Navbar'),
+  { ssr: false }
+)
 
 export const metadata = {
   title: 'FabricChowk',
@@ -21,7 +27,7 @@ export default function RootLayout({
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
       </head>
       <body>
-        <Navbar />
+        <NavbarNoSSR />
         {children}
         <Footer />
       </body>

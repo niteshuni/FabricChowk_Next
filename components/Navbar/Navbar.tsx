@@ -2,7 +2,7 @@
 
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
@@ -11,7 +11,6 @@ import Image from 'next/image';
 import WSProfile from '../shared/WSProfile';
 import { usePathname } from 'next/navigation'
 import RTProfile from '../shared/RTProfile';
-
 
 interface NavigationItem {
     name: string;
@@ -53,36 +52,12 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     const [currentLink, setCurrentLink] = useState('/');
-    const [isWSlogged, setIsWSlogged] = useState<string|null>(null);
-    const [isRTlogged, setIsRTlogged] = useState<string|null>(null);
-
 
     const pathname = usePathname();
     const pathArray = pathname.split('/');
     const checkWSPath = pathArray.find((path) => path === "ws");
-    //let isWSlogged: string | null = null;
-    //let isRTlogged: string | null = null;
-
-    
-    // useEffect(() => {
-    //   const handleStorageChange = () => {
-    //     setIsWSlogged(localStorage.getItem("signedws"));
-    //     setIsRTlogged(localStorage.getItem("signedrt"));
-    //   };
-  
-    //   window.addEventListener('storage', handleStorageChange);
-  
-    //   return () => {
-    //     window.removeEventListener('storage', handleStorageChange);
-    //   };
-    // }, []); 
-
-    if(typeof window != null) {
-      //isWSlogged = localStorage.getItem("signedws");
-      //isRTlogged = localStorage.getItem("signedrt");
-
-    }
-
+    const isWSlogged = localStorage.getItem("signedws");
+    const isRTlogged = localStorage.getItem("signedrt");
 
     return (
       <Disclosure as="nav" className="navbar">
