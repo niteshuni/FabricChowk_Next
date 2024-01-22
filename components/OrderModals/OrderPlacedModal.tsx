@@ -2,7 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
 type OrderPlacedModalProps = {
-    orderId: string;
+    productId: string;
 }
 
 const OrderPlacedModal = (props: OrderPlacedModalProps) => {
@@ -67,7 +67,7 @@ const OrderPlacedModal = (props: OrderPlacedModalProps) => {
 
                   <div className="mt-4">
                     <a
-                      href={`/orderplaced/${props.orderId}`}
+                      href={`/order/${props.productId}`}
                       className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
                     >
                       Order Details

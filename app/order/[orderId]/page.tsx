@@ -12,7 +12,7 @@ interface OrderDetailsParam {
     };
   }
 
-const OrderDetails: React.FC<OrderDetailsParam> = ({params}) => {
+const OrderRT: React.FC<OrderDetailsParam> = ({params}) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isTransaction, setIsTransaction] =  useState(false);
   const transactionRef = useRef<HTMLInputElement>(null);
@@ -67,7 +67,7 @@ const OrderDetails: React.FC<OrderDetailsParam> = ({params}) => {
     });
   }
 
-  const products = [productList[0]
+  const products = [productList.find((product) => product.id === currentOrderDetails.productId) ?? productList[0]
   ];
   return (
     <main className="bg-white mt-10 px-4 pb-24 pt-10 sm:px-6 sm:pt-24 lg:px-8 lg:py-32">
@@ -322,4 +322,4 @@ const OrderDetails: React.FC<OrderDetailsParam> = ({params}) => {
   );
 };
 
-export default OrderDetails;
+export default OrderRT;

@@ -9,7 +9,7 @@ import React, { useEffect, useRef, useState } from 'react'
 const orderObject: OrderEntity = {
     id: "11228456",
     date: "January 19, 2024",
-    productId: "",
+    productId: "1212",
     status: 3,
     quantity: 200,
     itemComment: "Provide green and blue cotton saree",
@@ -23,7 +23,7 @@ const orderObject: OrderEntity = {
     paymentFlag: false,
 };
 
-const OrderReceivedDetails: React.FC = () => {
+const OrderWS: React.FC = () => {
 
     const [currentOrderDetails, setCurrentOrderDetails] = useState<OrderEntity>(JSON.parse(localStorage.getItem("myOrder") ?? JSON.stringify(orderObject)));
     const [isApproved, setIsApproved] = useState(false);
@@ -105,7 +105,8 @@ const OrderReceivedDetails: React.FC = () => {
       }
     };
 
-    const product = productList[0];
+    const product = productList.find((product) => product.id === currentOrderDetails.productId) ?? productList[0];
+
   return (
     <>
       <main className="bg-white mt-10 px-4 pb-24 pt-10 sm:px-6 sm:pt-24 lg:px-8 lg:py-32">
@@ -427,4 +428,4 @@ const OrderReceivedDetails: React.FC = () => {
   );
 }
 
-export default OrderReceivedDetails;
+export default OrderWS;

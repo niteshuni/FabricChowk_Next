@@ -16,7 +16,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
   const [orderPlaced, setOrderPlaced] = useState(false);
   const quantityRef = useRef<HTMLInputElement>(null);
   const [itemText, setItemText] = useState("");
-  const [wholesaler, setWholesaler] = useState<PartnerWholesaler>(wholesalerList[0]);
+  const [wholesaler, setWholesaler] = useState<PartnerWholesaler>(wholesalerList[8]);
 
   const onClickBuyHandler = () => {
     const orderObject: OrderEntity = {
@@ -26,7 +26,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
       delivered: false,
       itemComment: itemText,
       paymentFlag: false,
-      productId: "1213",
+      productId: data.id,
       quantity: +(quantityRef.current?.value ?? 0),
       retailer: "Rushil Bansal, RR Enterprises",
       status: 1,
@@ -35,7 +35,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
       transactionId: undefined,
       wholesaler: wholesaler.businessName,
     };
-    localStorage.clear();
+    localStorage.removeItem('myOrder');
     localStorage.setItem('myOrder', JSON.stringify(orderObject));    
     setOrderPlaced(true);
   }
@@ -50,7 +50,7 @@ const ProductInfo: React.FC<InfoProps> = ({ data }) => {
 
   return (
     <div>
-      {orderPlaced && <OrderPlacedModal orderId="123"/>}
+      {orderPlaced && <OrderPlacedModal productId={data.id}/>}
       <h1 className="text-3xl bordered font-bold text-gray-900">{data.name}</h1>
       <div className="mt-3 items-end justify-between">
         {/* <p className="text-2xl text-gray-900">{data.company}</p> */}

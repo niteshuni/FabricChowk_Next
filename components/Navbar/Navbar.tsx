@@ -6,9 +6,12 @@ import React, { useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import Signdialog from "./Signdialog";
-import Registerdialog from "./Registerdialog";
+import Notification from '../shared/Notification';
 import Image from 'next/image';
+import WSProfile from '../shared/WSProfile';
+import { usePathname } from 'next/navigation'
+import RTProfile from '../shared/RTProfile';
+
 
 interface NavigationItem {
     name: string;
@@ -51,9 +54,12 @@ const Navbar = () => {
 
     const [currentLink, setCurrentLink] = useState('/');
 
-    const handleLinkClick = (href: string) => {
-        setCurrentLink(href);
-    };
+    const pathname = usePathname();
+    const pathArray = pathname.split('/');
+    const checkWSPath = pathArray.find((path) => path === "ws");
+    const isWSlogged = localStorage.getItem("signedws");
+    const isRTlogged = localStorage.getItem("signedrt");
+
 
     return (
       <Disclosure as="nav" className="navbar">
@@ -109,7 +115,7 @@ const Navbar = () => {
                     <li>
                       <details>
                         <summary>Categories</summary>
-                        <ul className='overflow-y-scroll max-h-[80vh]'>
+                        <ul className="overflow-y-scroll max-h-[80vh]">
                           <li>
                             <details>
                               <summary>Suiting</summary>
@@ -331,7 +337,9 @@ const Navbar = () => {
                             <a href="/retailers">Retailers</a>
                           </li>
                           <li>
-                            <a href="/howitworks">How&nbsp;FabricChowk&nbsp;Works</a>
+                            <a href="/howitworks">
+                              How&nbsp;FabricChowk&nbsp;Works
+                            </a>
                           </li>
                           <li>
                             <a href="/faq">FAQ</a>
@@ -343,14 +351,22 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* SIGNIN DIALOG */}
+              <Notification />
 
-              {/* <Signdialog /> */}
-
-              {/* REGISTER DIALOG */}
-
-              <Registerdialog />
-
+              {checkWSPath && isWSlogged ? <WSProfile /> : null}
+              {!checkWSPath && isRTlogged ? <RTProfile /> : null}
+              {(checkWSPath && !isWSlogged) || (!checkWSPath && !isRTlogged)  ? (<div className="hidden lg:block dropdown dropdown-end ">
+              <div tabIndex={0} role="button" className="m-1 mr-4 text-xl text-kellygreen bg-semikellygreen btn hover:text-white hover:bg-kellygreen">Sign In</div>
+                <ul className="p-2 text-lg shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                  <li>
+                    <a href='/ws/signin'>as Wholesaler</a>
+                  </li>
+                  <li>
+                    <a href='signin'>as Retailer</a>
+                  </li>
+                </ul>
+              </div>) : null}
+              
               {/* DRAWER FOR MOBILE VIEW */}
 
               {/* DRAWER ICON */}
