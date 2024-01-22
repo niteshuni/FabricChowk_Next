@@ -57,8 +57,14 @@ const Navbar = () => {
     const pathname = usePathname();
     const pathArray = pathname.split('/');
     const checkWSPath = pathArray.find((path) => path === "ws");
-    const isWSlogged = localStorage.getItem("signedws");
-    const isRTlogged = localStorage.getItem("signedrt");
+    let isWSlogged: string | null = null;
+    let isRTlogged: string | null = null;
+
+    if(window != null) {
+      isWSlogged = localStorage.getItem("signedws");
+      isRTlogged = localStorage.getItem("signedrt");
+
+    }
 
 
     return (
