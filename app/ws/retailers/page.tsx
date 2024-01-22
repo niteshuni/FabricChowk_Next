@@ -1,3 +1,5 @@
+"use client";
+
 import { wholesalerList } from '@/constants/partnerList';
 import { PartnerWholesaler } from '@/types/PartnersType';
 import Image from 'next/image';

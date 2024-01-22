@@ -1,3 +1,5 @@
+"use client";
+
 import BlogCard from '@/components/shared/BlogCard';
 import blogList from '@/constants/blogList';
 import React from 'react'

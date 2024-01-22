@@ -1,3 +1,5 @@
+"use client";
+
 import { wholesalerList } from "@/constants/partnerList";
 import React from "react";
 import Image from "next/image";

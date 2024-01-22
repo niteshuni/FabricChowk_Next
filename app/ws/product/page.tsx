@@ -1,3 +1,5 @@
+"use client";
+
 import SideBarFilter from "@/components/SideFilter/SideBarFilter";
 import { ProductCard } from "@/components/shared/ProductCard";
 import ResponsiveFilterDrawer from "@/components/shared/ResponsiveFilterDrawer";
