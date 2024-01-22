@@ -1,6 +1,6 @@
 "use client";
 
-import { wholesalerList } from '@/constants/partnerList';
+import { retailerList, wholesalerList } from '@/constants/partnerList';
 import { PartnerWholesaler } from '@/types/PartnersType';
 import Image from 'next/image';
 import React from 'react'
@@ -90,7 +90,7 @@ const Retailers = () => {
             </tr>
           </thead>
           <tbody>
-            {wholesalerList.map((item: PartnerWholesaler, index) => (
+            {retailerList.map((item: PartnerWholesaler, index) => (
               <tr key={index} style={{borderBottomColor: 'rgb(229, 231, 235)'}} className="bg-white border-b hover:bg-gray-50">
                 <th
                   scope="row"

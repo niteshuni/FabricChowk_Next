@@ -1,4 +1,4 @@
-import { PartnerWholesaler } from "@/types/PartnersType";
+import { PartnerRetailer, PartnerWholesaler } from "@/types/PartnersType";
 
 export const wholesalerList: PartnerWholesaler[] = [
   {
@@ -93,5 +93,56 @@ export const wholesalerList: PartnerWholesaler[] = [
     emailID: "gauravc@gmail.in",
     proprietor: "",
     address: "Bhagwandas Baijnath Rajgarhia Chowk, Munger, Bihar - 811201"
+  },
+];
+
+export const retailerList: PartnerRetailer[] = [
+  {
+    id: "rt1",
+    businessName: "Daisy Enterprises",
+    address: "#215, Celebrity Community, Sarjapur-Attibele, Bnagalore- 562107",
+    zone: "South",
+    category: "",
+    city: "Bangalore",
+    emailID: "daisy.shivanshi@gmail.com",
+    phone: "7008978123",
+    proprietor: "",
+    reference: "",
+  },
+  {
+    id: "rt2",
+    businessName: "RR Enterprises",
+    address: "123, 2nd floor shanti bagh, lal chowk, Lucknow - 226003",
+    zone: "East",
+    category: "",
+    city: "Lucknow",
+    emailID: "rrRushil@gmail.com",
+    phone: "7289302324",
+    proprietor: "",
+    reference: "",
+  },
+  {
+    id: "rt3",
+    businessName: "Dhinesh Rajgarhia",
+    address: "Flat 2, Block D, Prerna Apartments, Gandhi Road, Gwalior - 474001",
+    zone: "North",
+    category: "",
+    city: "Gwalior",
+    emailID: "dhinesh002@gmail.com",
+    phone: "9912268231",
+    proprietor: "",
+    reference: "",
+  },
+  {
+    id: "rt4",
+    businessName: "Anil Mahajan",
+    address: "#24, Bengali Colony, Ramadevi Chowraha, Kanpur - 208007",
+    zone: "North",
+    category: "",
+    city: "Kanpur",
+    emailID: "m.anil.awesome@gmail.com",
+    phone: "9916645232",
+    proprietor: "",
+    reference: "",
   },
 ];
