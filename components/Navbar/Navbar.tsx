@@ -2,7 +2,7 @@
 
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
@@ -60,7 +60,7 @@ const Navbar = () => {
     let isWSlogged: string | null = null;
     let isRTlogged: string | null = null;
 
-    if(window != null) {
+    if(typeof window != null) {
       isWSlogged = localStorage.getItem("signedws");
       isRTlogged = localStorage.getItem("signedrt");
 
