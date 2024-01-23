@@ -30,7 +30,7 @@ const LanguageToggle = () => {
             isChecked ? 'text-white bg-kellygreen' : 'text-kellygreen bg-semikellygreen'
           }`}
         >
-          HI
+          हि
         </span>
       </label>
     </>
